@@ -1,0 +1,59 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Validate release
+        run: |
+          npm run typecheck
+          npx vitest run tests/github-release-package.test.ts tests/c2.3-extension-manifest.test.ts tests/c2.3-integration-flow.test.ts
+          npm run build
+          npm run build:sillytavern-extension
+
+      - name: Package SillyTavern extension
+        run: |
+          cd integrations/sillytavern-extension/dist
+          zip -r "$RUNNER_TEMP/story-card-studio-sillytavern-extension-${GITHUB_REF_NAME}.zip" .
+
+      - name: Publish installable extension branch
+        run: |
+          git worktree add --detach "$RUNNER_TEMP/extension-branch"
+          cd "$RUNNER_TEMP/extension-branch"
+          git switch --orphan extension-release
+          git rm -rf .
+          cp -R "$GITHUB_WORKSPACE/integrations/sillytavern-extension/dist/." .
+          git add -A
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" commit -m "Release ${GITHUB_REF_NAME}"
+          git push origin HEAD:sillytavern-extension --force
+
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" \
+            "$RUNNER_TEMP/story-card-studio-sillytavern-extension-${GITHUB_REF_NAME}.zip#SillyTavern Extension" \
+            --verify-tag --generate-notes --title "Story Card Studio ${GITHUB_REF_NAME}"
+

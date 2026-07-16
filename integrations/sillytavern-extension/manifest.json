@@ -1,0 +1,13 @@
+{
+  "display_name": "Story Card Studio",
+  "loading_order": 20,
+  "dependencies": [],
+  "js": "index.js",
+  "css": "style.css",
+  "author": "Story Card Studio Contributors",
+  "version": "0.2.0",
+  "homePage": "https://github.com/Koukou0506/Story-Card-Studio",
+  "minimum_client_version": "1.12.12",
+  "auto_update": true,
+  "hooks": { "activate": "onActivate", "disable": "onDisable" }
+}

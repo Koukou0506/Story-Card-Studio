@@ -1,0 +1,16 @@
+{
+  "entries": {
+    "0": {
+      "uid": 0,
+      "key": ["临水镇"],
+      "keysecondary": [],
+      "comment": "临水镇",
+      "content": "临水镇是一座以石桥和书坊闻名的江南小镇。",
+      "constant": false,
+      "selective": false,
+      "order": 100,
+      "position": 0,
+      "disable": false
+    }
+  }
+}

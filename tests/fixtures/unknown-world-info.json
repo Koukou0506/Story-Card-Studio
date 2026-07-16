@@ -1,0 +1,15 @@
+{
+  "entries": {
+    "7": {
+      "uid": 7,
+      "key": ["未知字段"],
+      "comment": "未知字段保护",
+      "content": "此条目用于验证未知字段在编辑正文后仍被保留。",
+      "order": 100,
+      "position": 0,
+      "disable": false,
+      "mysteryEntryField": { "nested": true }
+    }
+  },
+  "mysteryRootField": { "version": 9 }
+}

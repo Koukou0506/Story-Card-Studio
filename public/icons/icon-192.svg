@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" viewBox="0 0 192 192" role="img" aria-label="Story Card Studio">
+  <rect width="192" height="192" rx="40" fill="#294A97"/>
+  <path d="M48 48h96v96H48z" fill="#FCFCF1" opacity=".16"/>
+  <path d="M60 62h72v12H60zm0 28h52v12H60zm0 28h66v12H60z" fill="#FCFCF1"/>
+</svg>
+

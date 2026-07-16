@@ -1,0 +1,6 @@
+/*
+ * Stable stylesheet entry for the Phase C2.0 application shell.
+ * Keeping this entry separate forces Next.js development sessions to load the
+ * visual-system asset together with the current React shell after UI upgrades.
+ */
+@import "./globals.css";

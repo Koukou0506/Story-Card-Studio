@@ -1,0 +1,40 @@
+{
+  "entries": {
+    "42": {
+      "uid": 42,
+      "key": ["/古玉(?:发光)?/i", "柳家古玉"],
+      "keysecondary": ["密室", "祖母"],
+      "comment": "古玉传说",
+      "content": "柳家古玉是祖辈遗物，相关力量尚未得到证实。",
+      "constant": false,
+      "vectorized": true,
+      "selective": true,
+      "selectiveLogic": 3,
+      "addMemo": true,
+      "order": 250,
+      "position": 4,
+      "disable": false,
+      "ignoreBudget": true,
+      "excludeRecursion": true,
+      "preventRecursion": true,
+      "delayUntilRecursion": 2,
+      "probability": 75,
+      "useProbability": true,
+      "depth": 3,
+      "outletName": "",
+      "group": "relics",
+      "groupOverride": true,
+      "groupWeight": 150,
+      "scanDepth": 6,
+      "caseSensitive": true,
+      "matchWholeWords": false,
+      "useGroupScoring": true,
+      "automationId": "jade-event",
+      "role": 1,
+      "sticky": 3,
+      "cooldown": 2,
+      "delay": 1,
+      "triggers": ["normal", "continue"]
+    }
+  }
+}

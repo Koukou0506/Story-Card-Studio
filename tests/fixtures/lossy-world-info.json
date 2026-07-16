@@ -1,0 +1,15 @@
+{
+  "entries": {
+    "1": {
+      "uid": 1,
+      "key": ["深度注入"],
+      "comment": "深度注入",
+      "content": "此内容需要在聊天深度位置注入。",
+      "order": 100,
+      "position": 4,
+      "depth": 2,
+      "role": 2,
+      "disable": false
+    }
+  }
+}

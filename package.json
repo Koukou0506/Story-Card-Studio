@@ -1,0 +1,46 @@
+{
+  "name": "story-card-studio",
+  "version": "0.2.0",
+  "private": true,
+  "description": "中文本地优先的角色卡、世界书、小说规划、正文写作与连续性创作工作台",
+  "license": "MIT",
+  "homepage": "https://github.com/Koukou0506/Story-Card-Studio",
+  "repository": { "type": "git", "url": "https://github.com/Koukou0506/Story-Card-Studio.git" },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "build:sillytavern-extension": "node integrations/sillytavern-extension/build.mjs",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:pwa": "vitest run tests/pwa-assets.test.ts tests/pwa-runtime.test.ts",
+    "test:c2.3": "vitest run c2.3",
+    "test:c2.4": "vitest run c2.4",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "chardet": "2.2.0",
+    "next": "^16.2.10",
+    "pdfjs-dist": "6.1.200",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.2",
+    "@types/node": "^26.1.1",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.3",
+    "autoprefixer": "^10.5.2",
+    "esbuild": "^0.28.1",
+    "eslint": "^10.6.0",
+    "eslint-config-next": "^16.2.10",
+    "jsdom": "^29.1.1",
+    "postcss": "^8.5.16",
+    "tailwindcss": "^4.3.2",
+    "typescript": "~5.9.0",
+    "vitest": "^4.1.10"
+  }
+}

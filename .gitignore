@@ -1,0 +1,26 @@
+# Dependencies and framework output
+node_modules/
+.next/
+out/
+coverage/
+*.tsbuildinfo
+
+# Local configuration and workspace data
+.env
+.env.*
+!.env.example
+.workspace-data/
+*.log
+
+# Local agent instructions and caches
+.agents/
+AGENT.md
+
+# Generated integration bundles
+integrations/sillytavern-extension/dist/
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
