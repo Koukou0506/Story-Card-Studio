@@ -1,0 +1,10 @@
+{
+  "extensionVersion": "0.2.1",
+  "storyCardStudioApiVersion": "1.0.0",
+  "minimumSillyTavernVersion": "1.12.12",
+  "contractTestedSillyTavernVersion": "1.18.0",
+  "characterCardVersions": ["v2"],
+  "worldInfoFormats": ["sillytavern-standalone"],
+  "features": ["context-read", "project-link", "task-run", "diff-preview", "world-info-writeback", "safe-export", "style-risk-diagnosis"],
+  "degradedFeatures": ["character-card-full-writeback", "group-character-writeback", "chat-message-writeback"]
+}

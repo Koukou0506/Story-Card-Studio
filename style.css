@@ -1,0 +1,31 @@
+.scs-toggle {
+  position: fixed; right: 1rem; bottom: max(1rem, env(safe-area-inset-bottom)); z-index: 9998;
+  min-width: 3rem; min-height: 3rem; border: 1px solid rgba(255,255,255,.2); border-radius: 999px;
+  color: #fff; background: #315c46; box-shadow: 0 8px 24px rgba(0,0,0,.28); cursor: pointer;
+}
+.scs-panel {
+  display: none; position: fixed; right: 1rem; bottom: max(4.75rem, calc(4.75rem + env(safe-area-inset-bottom)));
+  z-index: 9999; width: min(25rem, calc(100vw - 2rem)); max-height: min(46rem, calc(100dvh - 7rem)); overflow: auto;
+  padding: 1rem; color: #eef5ef; background: #18251e; border: 1px solid #547461; border-radius: .875rem;
+  box-shadow: 0 16px 48px rgba(0,0,0,.4); font: 14px/1.5 system-ui, sans-serif;
+}
+.scs-panel.scs-open { display: block; }
+.scs-panel h3, .scs-panel h4 { margin: 0 0 .75rem; color: #fff; }
+.scs-panel details { margin: .75rem 0; }
+.scs-panel summary { min-height: 2.75rem; cursor: pointer; }
+.scs-field { display: grid; grid-template-columns: minmax(8rem, 1fr) minmax(0, 1.4fr); align-items: center; gap: .5rem; margin: .5rem 0; }
+.scs-field input:not([type="checkbox"]), .scs-field select { min-width: 0; min-height: 2.75rem; padding: .45rem .55rem; color: #fff; background: #24372c; border: 1px solid #6d8977; border-radius: .5rem; }
+.scs-field input[type="checkbox"], .scs-diff input { width: 1.25rem; height: 1.25rem; }
+.scs-preview { max-height: 12rem; overflow: auto; padding: .75rem; white-space: pre-wrap; overflow-wrap: anywhere; color: #dce8df; background: #101813; border-radius: .5rem; }
+.scs-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .5rem; }
+.scs-panel button { min-height: 2.75rem; padding: .5rem .75rem; color: #fff; background: #315c46; border: 1px solid #70917d; border-radius: .5rem; cursor: pointer; }
+.scs-panel button:hover, .scs-panel button:focus-visible, .scs-toggle:focus-visible { background: #3d7357; outline: 3px solid #b6dfc4; outline-offset: 2px; }
+.scs-result { margin-top: 1rem; }
+.scs-diff { display: grid; grid-template-columns: 1.5rem 1fr; align-items: start; gap: .5rem; min-height: 2.75rem; padding: .4rem 0; }
+.scs-result > button { margin: .25rem .25rem .25rem 0; }
+@media (max-width: 480px) {
+  .scs-toggle { right: .75rem; }
+  .scs-panel { inset: .5rem .5rem calc(4.5rem + env(safe-area-inset-bottom)); width: auto; max-height: none; }
+  .scs-field { grid-template-columns: 1fr; }
+  .scs-actions { grid-template-columns: 1fr; }
+}
