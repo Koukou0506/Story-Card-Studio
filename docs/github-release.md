@@ -20,11 +20,12 @@ git push -u origin main
 4. 创建首个版本标签：
 
 ```powershell
-git tag v0.2.0
-git push origin v0.2.0
+git tag v0.2.1
+git push origin v0.2.1
 ```
 
 标签会触发 Release 工作流：验证主应用、构建扩展、更新 `sillytavern-extension` 分支，并在 Release 中附加 ZIP。
+Release 同时包含 `story-card-studio-server-v*.zip`。服务端包要求 Node.js 22，包含已构建应用、静态资源和启动脚本，不包含 `.env.local`、`.workspace-data` 或浏览器本机项目。
 
 ## 用户下载与安装
 
@@ -39,4 +40,3 @@ git push origin v0.2.0
 ## 发布安全
 
 `.env.local`、工作区项目数据、依赖目录和构建缓存均被 `.gitignore` 排除。提交前仍应运行 `git status --short`，确认没有密钥、令牌、用户正文或私有项目数据。
-

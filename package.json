@@ -1,6 +1,6 @@
 {
   "name": "story-card-studio",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "private": true,
   "description": "中文本地优先的角色卡、世界书、小说规划、正文写作与连续性创作工作台",
   "license": "MIT",
@@ -9,6 +9,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "package:server": "node scripts/package-server.mjs",
     "build:sillytavern-extension": "node integrations/sillytavern-extension/build.mjs",
     "start": "next start",
     "lint": "next lint",

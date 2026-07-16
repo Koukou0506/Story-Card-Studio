@@ -31,12 +31,18 @@ jobs:
           npm run typecheck
           npx vitest run tests/github-release-package.test.ts tests/c2.3-extension-manifest.test.ts tests/c2.3-integration-flow.test.ts
           npm run build
+          npm run package:server
           npm run build:sillytavern-extension
 
       - name: Package SillyTavern extension
         run: |
           cd integrations/sillytavern-extension/dist
           zip -r "$RUNNER_TEMP/story-card-studio-sillytavern-extension-${GITHUB_REF_NAME}.zip" .
+
+      - name: Package Story Card Studio server
+        run: |
+          cd .release/server
+          zip -r "$RUNNER_TEMP/story-card-studio-server-${GITHUB_REF_NAME}.zip" .
 
       - name: Publish installable extension branch
         run: |
@@ -54,5 +60,6 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh release create "$GITHUB_REF_NAME" \
+            "$RUNNER_TEMP/story-card-studio-server-${GITHUB_REF_NAME}.zip#Story Card Studio Server" \
             "$RUNNER_TEMP/story-card-studio-sillytavern-extension-${GITHUB_REF_NAME}.zip#SillyTavern Extension" \
             --verify-tag --generate-notes --title "Story Card Studio ${GITHUB_REF_NAME}"

@@ -19,4 +19,16 @@ describe("GitHub 发布契约", () => {
     expect(workflow).toContain("sillytavern-extension");
     expect(workflow).toContain("gh release create");
   });
+
+  test("Release 同时生成可运行的服务端包", async () => {
+    const [config, pkg, workflow, guide] = await Promise.all([
+      readFile("next.config.ts", "utf8"), readFile("package.json", "utf8"),
+      readFile(".github/workflows/release.yml", "utf8"), readFile("docs/server-package.md", "utf8"),
+    ]);
+    expect(config).toContain('output: "standalone"');
+    expect(pkg).toContain("package:server");
+    expect(workflow).toContain("story-card-studio-server-");
+    expect(guide).toContain(".workspace-data");
+    expect(guide).toContain("Node.js 22");
+  });
 });

@@ -5,7 +5,7 @@
   "js": "index.js",
   "css": "style.css",
   "author": "Story Card Studio Contributors",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "homePage": "https://github.com/Koukou0506/Story-Card-Studio",
   "minimum_client_version": "1.12.12",
   "auto_update": true,

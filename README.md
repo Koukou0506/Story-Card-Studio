@@ -6,6 +6,8 @@
 
 ## 快速开始
 
+普通用户也可以从 [GitHub Releases](https://github.com/Koukou0506/Story-Card-Studio/releases) 下载 `story-card-studio-server-v*.zip`。服务端运行包要求 Node.js 22；解压后的启动和数据迁移说明见 [服务端运行包文档](docs/server-package.md)。
+
 ### 1. 安装依赖
 
 ```bash

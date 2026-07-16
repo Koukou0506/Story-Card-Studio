@@ -15,6 +15,7 @@ const configuredDevOrigins = (process.env.DEV_ALLOWED_ORIGINS ?? "")
   .filter(Boolean);
 
 const nextConfig: NextConfig = {
+  output: "standalone",
   turbopack: {},
   allowedDevOrigins: [...new Set(["localhost", "127.0.0.1", ...localDevOrigins, ...configuredDevOrigins])],
 };
