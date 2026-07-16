@@ -43,7 +43,7 @@ jobs:
           git worktree add --detach "$RUNNER_TEMP/extension-branch"
           cd "$RUNNER_TEMP/extension-branch"
           git switch --orphan extension-release
-          git rm -rf .
+          git rm -rf . || true
           cp -R "$GITHUB_WORKSPACE/integrations/sillytavern-extension/dist/." .
           git add -A
           git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" commit -m "Release ${GITHUB_REF_NAME}"
@@ -56,4 +56,3 @@ jobs:
           gh release create "$GITHUB_REF_NAME" \
             "$RUNNER_TEMP/story-card-studio-sillytavern-extension-${GITHUB_REF_NAME}.zip#SillyTavern Extension" \
             --verify-tag --generate-notes --title "Story Card Studio ${GITHUB_REF_NAME}"
-

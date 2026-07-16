@@ -18,6 +18,7 @@ AGENT.md
 
 # Generated integration bundles
 integrations/sillytavern-extension/dist/
+.release/
 
 # Editors and operating systems
 .idea/
