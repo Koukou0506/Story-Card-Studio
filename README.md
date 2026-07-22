@@ -1,3 +1,4 @@
+**使用其它语言: [中文](README.md), [English](README_en.md).**
 # Story Card Studio
 
 一个面向中文创作者的本地优先长篇创作工作台，覆盖角色、世界、分析、规划、正文与连续性管理。
