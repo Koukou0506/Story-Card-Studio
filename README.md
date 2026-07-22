@@ -136,7 +136,7 @@ ANTHROPIC_API_KEY=your-key
 - 读取、合并、替换或写回 Character Book；
 - 冲突先预览，不无提示覆盖原卡。
 
-<img src="https://github.com/Koukou0506/Story-Card-Studio/docs/character.jpeg">
+<img src="./docs/character.jpeg">
 
 ### 世界书
 
