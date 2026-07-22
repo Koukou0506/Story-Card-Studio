@@ -152,7 +152,7 @@ ANTHROPIC_API_KEY=your-key
 
 > 📷 **截图待补：世界书与激活模拟器**  
 > 内容建议：条目列表、关键词、高级设置和模拟结果。  
-> 建议路径：`docs/images/readme/lorebook.webp`。
+
 
 ### 剧情分析
 
@@ -169,7 +169,7 @@ ANTHROPIC_API_KEY=your-key
 
 > 📷 **截图待补：剧情分析报告**  
 > 内容建议：综合结论、维度评分、严重问题和来源引用。  
-> 建议路径：`docs/images/readme/plot-analysis.webp`。
+
 
 ### 故事规划
 
@@ -197,7 +197,7 @@ ANTHROPIC_API_KEY=your-key
 
 > 📷 **截图待补：章节与场景规划**  
 > 内容建议：章节列表、场景卡、状态继承和问题提示。  
-> 建议路径：`docs/images/readme/chapter-scene-planning.webp`。
+
 
 ### 正文写作
 
@@ -215,7 +215,7 @@ ANTHROPIC_API_KEY=your-key
 
 > 📷 **截图待补：正文编辑与修订对比**  
 > 内容建议：编辑器、生成控制、Diff 和版本历史。  
-> 建议路径：`docs/images/readme/prose-editor.webp`。
+
 
 ### 文本诊断与风格规则
 
@@ -240,7 +240,7 @@ Style Profile 保存句长、段落、对话/动作/心理/环境比例、情绪
 
 > 📷 **截图待补：连续性中心**  
 > 内容建议：Canon、剧情线、伏笔、问题和健康概览。  
-> 建议路径：`docs/images/readme/continuity-center.webp`。
+
 
 ### 可视化、项目助手与设定变更
 
@@ -282,7 +282,7 @@ Style Profile 保存句长、段落、对话/动作/心理/环境比例、情绪
 
 > 📷 **截图待补：作品导入与重建**  
 > 内容建议：文件清单、卷章确认、候选资料和重建方案。  
-> 建议路径：`docs/images/readme/work-import.webp`。
+
 
 ## 移动端与跨设备
 
@@ -297,10 +297,6 @@ Story Card Studio 是响应式 Web 应用，不需要原生手机 App。
 - 保存携带版本号，旧客户端不会静默覆盖新版本。
 
 远程访问必须使用 HTTPS、认证和受控网络，不要把无认证服务直接暴露到公网。
-
-> 📷 **截图待补：手机端工作区**  
-> 内容建议：移动导航、全屏正文和保存状态。  
-> 建议路径：`docs/images/readme/mobile-workspace.webp`。
 
 ## SillyTavern 扩展
 
